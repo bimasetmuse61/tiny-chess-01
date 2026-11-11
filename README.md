@@ -9,12 +9,11 @@ check extensions, searching to a fixed 100,000-node budget per move
 (no clock, no randomness, no model calls). Evaluation is material
 plus piece-square tables and the bishop pair.
 
-Practice Elo (v5): trial-0 1430, trial-1 1326, mean 1378 — above
-the sunfish 4K baseline (mean 1360), but the lead is thin.
-v6 raises the node budget 75k -> 100k per move (the v3 timeout
-was caused by CPU contention, not the budget). Node budget
-100,000/move keeps every move well under the 10 s limit
-and each 16-game trial under the 3,600 s wall.
+Practice Elo (v6, 3 instances): trial-0 1464, trial-1 1530,
+trial-2 1497 — mean 1497, above the sunfish 4K baseline
+(mean 1360) by 137 Elo. v5 (75k nodes) averaged 1384.
+Node budget 100,000/move keeps every move well under the
+10 s limit and each 16-game trial under the 3,600 s wall.
 
 ## License
 
